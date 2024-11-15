@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34;
+}
+
+.moving-bar {
+    position: absolute;
+    top: 50%;
+    left: -200px; /* Start offscreen */
+    width: 200px;
+    height: 20px;
+    background: linear-gradient(90deg, #ff6f61, #ffcc00);
+    border-radius: 10px;
+    animation: slide 4s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        left: -200px; /* Start offscreen on the left */
+    }
+    50% {
+        left: 100vw; /* Move across the entire width */
+    }
+    100% {
+        left: -200px; /* Return to starting point */
+    }
+}
